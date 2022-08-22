@@ -1,5 +1,6 @@
 -var title = 'Título Principal';
 -var subtitulos = ['Título Principal', 'Subtítulo 1', 'Subtítulo 2', 'Subtítulo 3'];
+-var user = 'Duvan';
 
 doctype html
 html(lang="en")
@@ -9,11 +10,14 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
     link(rel="stylesheet", href="./css/ejercicio-pug.css")
-    title Document
+    title Platzi Games
   body
     header
-      h1 Platzi Games
-      a.boton(href="")  Registro
+      h1 Platzi
+      if user 
+        a Hola #{user}
+      else
+        a.boton(href="")  Registro
     
     section.intro
       .intro__image: img(src="./images/imagen.png")
@@ -37,3 +41,8 @@ html(lang="en")
         //-   span Lorem ipsum dolor sit.
         
         a.boton Leer más
+    
+    ul 
+      //- LOOPS
+      each titulo in subtitulos
+        li #{titulo}
