@@ -7,7 +7,26 @@ html(lang="en")
 
     link(rel="stylesheet", href="./css/ejercicio-pug.css")
     title Document
-  body 
-    header 
+  body
+    header
       h1 Platzi Games
       a.boton(href="")  Registro
+    
+    section.intro
+      .intro__image: img(src="./images/imagen.png")
+      .intro__contenido
+        h2 Título Principal
+        p Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          span Lorem ipsum dolor sit.
+        
+        //- PARA TEXTOS LARGOS FORMA 1 -> INTERPOLACIÓN con un punto (.)
+        //- p. 
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        //-   span Lorem ipsum dolor sit.
+
+        //- PARA TEXTOS LARGOS, FORMA 2 -> INTERPOLACIÓN con una linea (|)
+        //- p 
+          | Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+        //-   span Lorem ipsum dolor sit.
+        
+        a.boton Leer más
