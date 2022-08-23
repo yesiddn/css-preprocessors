@@ -1,60 +1,38 @@
--var title = 'Título Principal';
--var subtitulos = ['Subtítulo 1', 'Subtítulo 2', 'Subtítulo 3'];
--var user = 'Duvan';
-mixin caja (imagen, titulo)
-  .caja
-        .caja__imagen: img(src="./images/" + imagen)
-        .caja__contenido
-          h3 #{titulo}
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque autem sunt ipsam unde, vel eligendi ullam, repellat eos soluta sed possimus exercitationem a harum inventore amet, voluptatem dolorum! Dignissimos, iste!
+//- include ./components/encabezado.pug
+//- inlude une los componentes dentro de la última sección que tenga el archivo, por lo cual, es mejor usar extends para unir un componente padre con uno hijo
+extend ./components/plantilla.pug
+block contenido
 
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  section.intro
+    .intro__image: img(src="./images/imagen.png")
+    .intro__contenido
+      //- VARIABLES
+      h2= title
+      //- h2 #{subtitulos[0]}
+      //- h2 #{subtitulos[0][1]}
+      //- h2 #{title}
 
-    link(rel="stylesheet", href="./css/ejercicio-pug.css")
-    title Platzi Games
-  body
-    header
-      h1 Platzi
-      if user 
-        a Hola #{user}
-      else
-        a.boton(href="")  Registro
-    
-    section.intro
-      .intro__image: img(src="./images/imagen.png")
-      .intro__contenido
-        //- VARIABLES
-        h2= title
-        //- h2 #{subtitulos[0]}
-        //- h2 #{subtitulos[0][1]}
-        //- h2 #{title}
-
-        p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, officia enim recusandae doloribus voluptate placeat, fuga maiores saepe accusamus odio ullam aliquid modi laudantium ipsam quasi. Dolore et ipsa enim.
-          span Lorem ipsum dolor sit.
-        
-        //- PARA TEXTOS LARGOS FORMA 1 -> INTERPOLACIÓN con un punto (.)
-        //- p. 
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        //-   span Lorem ipsum dolor sit.
-
-        //- PARA TEXTOS LARGOS, FORMA 2 -> INTERPOLACIÓN con una linea (|)
-        //- p 
-          | Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        //-   span Lorem ipsum dolor sit.
-        
-        a.boton Leer más
-    
-    //- LOOPS
-    //- ul 
-    //-   each titulo in subtitulos
-    //-     li #{titulo}
-
-    main.contenido
-      each subtitulo in subtitulos
-        +caja('imagen.png', subtitulo)
+      p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut, officia enim recusandae doloribus voluptate placeat, fuga maiores saepe accusamus odio ullam aliquid modi laudantium ipsam quasi. Dolore et ipsa enim.
+        span Lorem ipsum dolor sit.
       
+      //- PARA TEXTOS LARGOS FORMA 1 -> INTERPOLACIÓN con un punto (.)
+      //- p. 
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      //-   span Lorem ipsum dolor sit.
+
+      //- PARA TEXTOS LARGOS, FORMA 2 -> INTERPOLACIÓN con una linea (|)
+      //- p 
+        | Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+      //-   span Lorem ipsum dolor sit.
+      
+      a.boton Leer más
+
+  //- LOOPS
+  //- ul 
+  //-   each titulo in subtitulos
+  //-     li #{titulo}
+
+  main.contenido
+    each subtitulo in subtitulos
+      +caja('imagen.png', subtitulo)
+    
