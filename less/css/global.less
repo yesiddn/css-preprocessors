@@ -1,16 +1,28 @@
+// VARIABLES
+// COLORS
+@primary-color: #333333;
+@secondary-color: #8841da;
+@light-color: #FFFFFF;
+@tertiary-color: #012179;
+
+// FONTS
+@font-one: 'Lato', sans-serif;
+@font-two: 'Oswald', sans-serif;
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: @font-one;
+  color: @primary-color;
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
-  font-family: 'Oswald', sans-serif;
+  font-family: @font-two;
   text-transform: uppercase;
 }
