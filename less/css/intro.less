@@ -29,13 +29,12 @@
   }
 
   &__categoria {
-    font-family: @font-one;
+    font-family: @font-two;
     text-transform: uppercase;
+    color: fade(@light-color, 50%);
   }
 
   &__titulo {
-    font-family: @font-two;
-    text-transform: uppercase;
     font-size: 50px;
   }
 
@@ -58,6 +57,10 @@
 
     span {
       display: inline-block;
+    }
+
+    &-titulo {
+      color: fade(@light-color, 50%);
     }
   }
 }
