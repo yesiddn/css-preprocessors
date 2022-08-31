@@ -4,6 +4,8 @@
   height: 650px;
   padding: 10px;
   margin: 0 auto;
+  background-color: @light-color;
+  .box-shadow(); // mixin
 
   // ANIDACIÓN
   // .intro__imagen -> nombre normal
@@ -29,9 +31,8 @@
   }
 
   &__categoria {
-    font-family: @font-two;
-    text-transform: uppercase;
     color: fade(@light-color, 50%);
+    .oswald();
   }
 
   &__titulo {

@@ -1,4 +1,4 @@
-// VARIABLES
+  // VARIABLES
 // COLORS
 @primary-color: #333333;
 @secondary-color: #8841da;
@@ -9,6 +9,20 @@
 @font-one: 'Lato', sans-serif;
 @font-two: 'Oswald', sans-serif;
 @basic-font-size: 18px;
+
+  // MIXINS
+.box-shadow {
+  box-shadow:0px 5px 15px 0px fade(@primary-color,50%);
+}
+
+.oswald {
+  font-family: @font-two;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+// STYLES
+
 * {
   box-sizing: border-box;
 }
@@ -23,6 +37,5 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-family: @font-two;
-  text-transform: uppercase;
+  .oswald();
 }
