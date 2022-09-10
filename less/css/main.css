@@ -17,6 +17,26 @@ body {
   color: #333333;
   font-size: 18px;
   line-height: 28px;
+  background-color: #333333;
+  color: #FFFFFF;
+}
+body .intro {
+  background-color: #8841da;
+}
+body .articulo--principal {
+  color: #FFFFFF;
+}
+body .articulo--principal h1,
+body .articulo--principal h2,
+body .articulo--principal h3 {
+  color: #8841da;
+}
+body .contenedor--cajas .caja .caja__contenido {
+  background-color: #333333;
+  color: #FFFFFF;
+}
+body .contenedor--cajas .caja a {
+  color: #FFFFFF;
 }
 h1,
 h2,
