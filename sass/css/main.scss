@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.perfil {
+  width: 50%;
+  padding-top: 50px;
+  text-align: center;
+  
+  // ANIDACIÓN
+  &__avatar {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  &__nombre{
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  &__titulo {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__boton {
+    display: block;
+    width: 100px;
+    height: 40px;
+    margin: 15px auto;
+    padding-top: 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
