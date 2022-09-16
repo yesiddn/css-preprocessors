@@ -1,0 +1,51 @@
+@use './index' as *;
+// @use is new in Dart Sass 1.23.0. View more details at https://sass-lang.com/documentation/at-rules/use
+// En index.scss se importan todos at-rules y se exportan todos los componentes con use
+
+.perfil {
+  width: 50%;
+  padding-top: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $secondary-color;
+  color: $light-color;
+
+  // ANIDACIÓN
+  &__avatar {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  &__nombre {
+    font-family: $font-two;
+    font-size: 20px;
+  }
+  &__titulo {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__boton {
+    display: block;
+    width: 100px;
+    height: 40px;
+    margin: 15px auto;
+    padding-top: 10px;
+    border-radius: 20px;
+    font-family: $font-two;
+    text-decoration: none;
+    color: $light-color;
+  }
+}
+
+.perfil__minibio {
+  margin: 0 auto;
+  padding-top: 20px;
+
+  h2 {
+    @extend .perfil__nombre;
+  }
+  h3 {
+    @extend .perfil__titulo;
+  }
+}
