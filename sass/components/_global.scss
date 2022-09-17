@@ -16,3 +16,8 @@ $aux-color: #3f579a;
   background-color: $light-color;
   color: $primary-color;
 }
+
+// FUNCTIONS
+@function get-opacity($color, $opacity) {
+  @return rgba($color, $opacity);
+}

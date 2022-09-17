@@ -24,14 +24,17 @@
     font-size: 12px;
     font-weight: 700;
     text-align: center;
+    color: get-opacity($light-color, 0.5);
   }
   &__boton {
     display: block;
     width: 100px;
     height: 40px;
     margin: 15px auto;
-    padding-top: 10px;
+    padding-top: 5px;
+    border: 2px solid get-opacity($light-color, 0.8);
     border-radius: 20px;
+    background-color: get-opacity($primary-color, 0.4);
     font-family: $font-two;
     text-decoration: none;
     color: $light-color;
