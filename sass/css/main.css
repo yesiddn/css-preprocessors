@@ -66,10 +66,12 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #ffffff;
   border-radius: 20px;
-  font-family: "Oswald", sans-serif;
+  -webkit-box-shadow: 0 20px 33px 0 rgba(51, 51, 51, 0.5);
+          box-shadow: 0 20px 33px 0 rgba(51, 51, 51, 0.5);
+  background-color: #ffffff;
   color: #333333;
+  font-family: "Oswald", sans-serif;
 }
 .estadistica--perfil h3 {
   margin: 0;
@@ -86,9 +88,12 @@ main {
   margin: 30px auto 0;
   padding-top: 20px;
   padding-left: 50px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 20px 33px 0 rgba(51, 51, 51, 0.5);
+          box-shadow: 0 20px 33px 0 rgba(51, 51, 51, 0.5);
   background-color: #ffffff;
-  font-family: "Oswald", sans-serif;
   color: #333333;
+  font-family: "Oswald", sans-serif;
 }
 .ubicacion--perfil i {
   display: block;

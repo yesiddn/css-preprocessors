@@ -8,3 +8,11 @@ $primary-color: #333333;
 $secondary-color: #8841da;
 $light-color: #ffffff;
 $aux-color: #3f579a;
+
+// MIXINS
+@mixin box {
+  border-radius: 20px;
+  box-shadow: 0 20px 33px 0 rgba($primary-color, .5);
+  background-color: $light-color;
+  color: $primary-color;
+}

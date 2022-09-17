@@ -8,11 +8,9 @@
   // padding-top: 15px;
   justify-content: space-around;
   align-items: center;
-  background-color: $light-color;
-  border-radius: 20px;
+  @include box;
 
   font-family: $font-two;
-  color: $primary-color;
 
   h3 {
     margin: 0;

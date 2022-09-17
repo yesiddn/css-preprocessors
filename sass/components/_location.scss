@@ -6,10 +6,9 @@
   margin: 30px auto 0;
   padding-top: 20px;
   padding-left: 50px;
-  background-color: $light-color;
+  @include box;
 
   font-family: $font-two;
-  color: $primary-color;
 
   i {
     display: block;
