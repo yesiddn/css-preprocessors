@@ -9,8 +9,7 @@
   justify-content: space-around;
   align-items: center;
   @include box;
-
-  font-family: $font-two;
+  @include titles($font-two);
 
   h3 {
     margin: 0;

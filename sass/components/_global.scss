@@ -17,7 +17,25 @@ $aux-color: #3f579a;
   color: $primary-color;
 }
 
+@mixin titles($font) {
+  @if $font == $font-one {
+    font-family: $font-one;
+  } @else if $font == $font-two {
+    font-family: $font-two;
+    // text-transform: uppercase;
+  }
+}
+
 // FUNCTIONS
 @function get-opacity($color, $opacity) {
   @return rgba($color, $opacity);
+}
+
+// LOOPS
+// Ver más en https://sass-lang.com/documentation/at-rules/control/each
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px) {
+  #{$header} {
+    font-size: $size;
+    margin: 0;
+  }
 }

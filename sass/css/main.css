@@ -1,3 +1,18 @@
+h1 {
+  font-size: 30px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 25px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -17,11 +32,11 @@ main {
 }
 
 .perfil {
-  width: 50%;
+  width: 100%;
   padding-top: 50px;
-  text-transform: uppercase;
-  text-align: center;
   background-color: #8841da;
+  text-align: center;
+  text-transform: uppercase;
   color: #ffffff;
 }
 .perfil__avatar {
@@ -31,7 +46,6 @@ main {
 }
 .perfil__nombre, .perfil__minibio h2 {
   font-family: "Oswald", sans-serif;
-  font-size: 20px;
 }
 .perfil__titulo, .perfil__minibio h3 {
   font-size: 12px;
@@ -43,14 +57,14 @@ main {
   display: block;
   width: 100px;
   height: 40px;
-  margin: 15px auto;
+  margin: 20px auto;
   padding-top: 5px;
   border: 2px solid rgba(255, 255, 255, 0.8);
   border-radius: 20px;
   background-color: rgba(51, 51, 51, 0.4);
-  font-family: "Oswald", sans-serif;
   text-decoration: none;
   color: #ffffff;
+  font-family: "Lato", sans-serif;
 }
 
 .perfil__minibio {
@@ -88,15 +102,14 @@ main {
 .ubicacion--perfil {
   width: 60%;
   height: 90px;
-  margin: 30px auto 0;
+  margin: 30px auto;
   padding-top: 20px;
-  padding-left: 50px;
+  padding-left: 40px;
   border-radius: 20px;
   -webkit-box-shadow: 0 20px 33px 0 rgba(51, 51, 51, 0.5);
           box-shadow: 0 20px 33px 0 rgba(51, 51, 51, 0.5);
   background-color: #ffffff;
   color: #333333;
-  font-family: "Oswald", sans-serif;
 }
 .ubicacion--perfil i {
   display: block;
@@ -115,16 +128,10 @@ main {
 }
 
 .galeria {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   width: 60%;
   height: 250px;
-  margin: 10px auto;
+  margin: 0px auto;
   padding: 20px 0 0 30px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   border-radius: 20px;
   -webkit-box-shadow: 0 20px 33px 0 rgba(51, 51, 51, 0.5);
           box-shadow: 0 20px 33px 0 rgba(51, 51, 51, 0.5);
@@ -133,18 +140,17 @@ main {
 }
 .galeria h2 {
   margin-bottom: 10px;
-  font-family: "Oswald", sans-serif;
   font-size: 20px;
   font-weight: 600;
+  font-family: "Oswald", sans-serif;
 }
 .galeria__foto-principal {
   float: left;
-  margin-right: 10px;
 }
 .galeria__fotos-adicionales img {
   height: 70px;
-  margin-right: 5px;
-  margin-bottom: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 .galeria img {
   border-radius: 10px;

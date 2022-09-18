@@ -3,11 +3,11 @@
 // En index.scss se importan todos at-rules y se exportan todos los componentes con use
 
 .perfil {
-  width: 50%;
+  width: 100%;
   padding-top: 50px;
-  text-transform: uppercase;
-  text-align: center;
   background-color: $secondary-color;
+  text-align: center;
+  text-transform: uppercase;
   color: $light-color;
 
   // ANIDACIÓN
@@ -17,8 +17,7 @@
     border-radius: 50%;
   }
   &__nombre {
-    font-family: $font-two;
-    font-size: 20px;
+    @include titles($font-two);
   }
   &__titulo {
     font-size: 12px;
@@ -30,14 +29,14 @@
     display: block;
     width: 100px;
     height: 40px;
-    margin: 15px auto;
+    margin: 20px auto;
     padding-top: 5px;
     border: 2px solid get-opacity($light-color, 0.8);
     border-radius: 20px;
     background-color: get-opacity($primary-color, 0.4);
-    font-family: $font-two;
     text-decoration: none;
     color: $light-color;
+    @include titles($font-one);
   }
 }
 
