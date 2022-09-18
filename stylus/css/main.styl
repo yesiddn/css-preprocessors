@@ -1,28 +1,68 @@
+// VARIABLES
+
+// COLORS
+primary-color = #333333
+secondary-color = #8841DA
+light-color = #FFFFFF
+
+// FONTS
+font-one = 'Lato', sans-serif
+font-two = 'Oswald', sans-serif
+
 * 
-  box-sizing: border-box
+  box-sizing border-box
 
 body
-  margin: 0
-  font-family: 'Lato', sans-serif
+  margin 0
+  font-family font-one
+  color primary-color
 
 .buscador
-  width: 100%
-  height: 250px
-  padding: 100px
-  background-image: url('../images/cover.jpg')
-  background-size: cover
-  text-align: center
+  width 100%
+  height 250px
+  padding 100px
+  background-image url('../images/cover.jpg')
+  background-size cover
+  text-align center
 
   form
-    margin: 0px
+    margin 0px
 
   // ANIDACIÓN 
   &__input
-    width: 75%
-    height: 50px
-    padding: 20px
-    border: none
-    border-radius: 30px
-    font-size: 25px
+    width 75%
+    height 50px
+    padding 20px
+    border none
+    border-radius 30px
+    font-size 25px
   &__input:focus
-    outline: none
+    outline none
+
+.encabezado--con-filtros
+  display flex
+  width 90%
+  margin 0 auto
+  padding 30px 0
+  justify-content space-between
+
+  h2
+    margin-top 10px
+    font-family font-two
+    font-size 50px
+    font-weight 500
+    text-transform uppercase
+
+  .filtros
+    width 250px
+    height 75px
+    padding 20px
+    margin-left auto
+
+    span
+      font-family font-two
+      text-transform uppercase
+
+    a
+      margin-left 20px
+      font-size 25px
