@@ -1,0 +1,43 @@
+// VARIABLES
+$dark-mode: true;
+
+// FONTS
+$font-one: 'Lato', sans-serif;
+$font-two: 'Oswald', sans-serif;
+
+// Colors
+$primary-color: #333333;
+$secondary-color: #8841da;
+$light-color: #ffffff;
+$aux-color: #3f579a;
+
+// MIXINS
+@mixin box {
+  border-radius: 20px;
+  box-shadow: 0 20px 33px 0 rgba($primary-color, .5);
+  background-color: $light-color;
+  color: $primary-color;
+}
+
+@mixin titles($font) {
+  @if $font == $font-one {
+    font-family: $font-one;
+  } @else if $font == $font-two {
+    font-family: $font-two;
+    // text-transform: uppercase;
+  }
+}
+
+// FUNCTIONS
+@function get-opacity($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+// LOOPS
+// Ver más en https://sass-lang.com/documentation/at-rules/control/each
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px) {
+  #{$header} {
+    font-size: $size;
+    margin: 0;
+  }
+}

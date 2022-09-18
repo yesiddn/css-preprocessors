@@ -1,0 +1,74 @@
+@use './index' as *;
+// @use is new in Dart Sass 1.23.0. View more details at https://sass-lang.com/documentation/at-rules/use
+// En index.scss se importan todos at-rules y se exportan todos los componentes con use
+
+.perfil {
+  width: 50%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $light-color;
+
+  @if $dark-mode {
+    background-color: $light-color;
+  } else {
+    background-color: $secondary-color;
+  }
+
+  // ANIDACIÓN
+  &__avatar {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  &__nombre {
+    @include titles($font-two);
+
+    @if $dark-mode {
+      color: $secondary-color;
+    }
+  }
+  &__titulo {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    color: get-opacity($light-color, 0.5);
+    @include titles($font-two);
+
+    @if $dark-mode {
+      color: get-opacity($aux-color, 0.6);
+    }
+  }
+  &__boton {
+    display: block;
+    width: 100px;
+    height: 40px;
+    margin: 20px auto;
+    padding-top: 7px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: $light-color;
+    @include titles($font-one);
+    
+    @if $dark-mode {
+      border: 2px solid get-opacity($primary-color, 1);
+      background-color: get-opacity($primary-color, 1);
+    } @else {
+      border: 2px solid get-opacity($light-color, 0.8);
+      background-color: get-opacity($primary-color, 0.5);
+    }
+  }
+}
+
+.perfil__minibio {
+  margin: 0 auto;
+  padding-top: 20px;
+
+  h2 {
+    @extend .perfil__nombre;
+  }
+  h3 {
+    @extend .perfil__titulo;
+  }
+}

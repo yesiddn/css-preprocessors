@@ -1,0 +1,22 @@
+@use './index' as *;
+
+.estadistica--perfil {
+  display: flex;
+  width: 60%;
+  height: 90px;
+  margin: 0 auto;
+  // padding-top: 15px;
+  justify-content: space-around;
+  align-items: center;
+  @include box;
+  @include titles($font-two);
+
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  span {
+    font-size: 12px;
+  }
+}

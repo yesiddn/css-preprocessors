@@ -1,0 +1,37 @@
+@use './index' as *;
+
+.galeria {
+  // display: flex;
+  width: 60%;
+  height: 250px;
+  margin: 0px auto;
+  padding: 20px 30px;
+  // justify-content: space-evenly;
+  @include box;
+
+  h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: start;
+    @include titles($font-two);
+  }
+
+  &__foto-principal {
+    float: left;
+    margin-right: 30px;
+  }
+
+  &__fotos-adicionales img:nth-child(2) {
+    margin-right: 10px;
+  }
+  &__fotos-adicionales img {
+    height: 70px;
+    // margin-right: 10px;
+    margin-bottom: 10px;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+}
