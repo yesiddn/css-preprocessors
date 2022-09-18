@@ -1,0 +1,50 @@
+  // VARIABLES
+@darkmode: true;
+
+// COLORS
+@primary-color: #333333;
+@secondary-color: #8841da;
+@light-color: #FFFFFF;
+@tertiary-color: #012179;
+
+// FONTS
+@font-one: 'Lato', sans-serif;
+@font-two: 'Oswald', sans-serif;
+@basic-font-size: 18px;
+
+  // MIXINS
+.box-shadow {
+  box-shadow:0px 5px 15px 0px fade(@primary-color,50%);
+}
+
+.oswald {
+  font-family: @font-two;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.font-size(@size) {
+  font-size: @size;
+  line-height: @size + 10%;
+}
+
+// STYLES
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: @font-one;
+  color: @primary-color;
+  .font-size(@basic-font-size);
+  .darkmode(@darkmode);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  .oswald();
+}

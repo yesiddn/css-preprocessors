@@ -1,0 +1,30 @@
+.darkmode(@darkmode) when (@darkmode = true) {
+  background-color: @primary-color;
+  color: @light-color;
+
+  .intro {
+    background-color: @secondary-color;
+  }
+
+  .articulo--principal {
+    color: @light-color;
+
+    h1,
+    h2,
+    h3 {
+      color: @secondary-color;
+    }
+  }
+
+  .contenedor--cajas {
+    .caja {
+      .caja__contenido {
+        background-color: @primary-color;
+        color: @light-color;
+      }
+      a {
+        color: @light-color;
+      }
+    }
+  }
+}
