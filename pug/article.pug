@@ -1,0 +1,13 @@
+extend ./components/plantilla.pug
+block contenido
+
+  .content
+    include ./components/menu-aside.pug
+
+    main
+      section.article
+        h2 #{title}
+        p.article__content Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos voluptate ratione autem eos earum iste fugit sit eum reiciendis cupiditate animi nisi nobis doloribus magni deserunt, maxime minima cum nihil. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, cupiditate. Quibusdam, repellat nulla a eum aperiam reiciendis molestiae exercitationem esse eveniet aspernatur corporis illum veniam saepe debitis, rerum nemo quos?
+        p.article__content Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi magnam illo, vero, nam eaque error harum nobis earum, soluta iusto reiciendis laudantium numquam minima exercitationem et repellendus dolores perspiciatis mollitia!
+
+        a.boton(href="") #{buttons[1]} 
