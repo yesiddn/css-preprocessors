@@ -5,7 +5,7 @@
   width: 60%;
   height: 250px;
   margin: 0px auto;
-  padding: 20px 0 0 30px;
+  padding: 20px 30px;
   // justify-content: space-evenly;
   @include box;
 
@@ -13,17 +13,21 @@
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: 600;
+    text-align: start;
     @include titles($font-two);
   }
 
   &__foto-principal {
     float: left;
-    // margin-right: 10px;
+    margin-right: 30px;
   }
 
+  &__fotos-adicionales img:nth-child(2) {
+    margin-right: 10px;
+  }
   &__fotos-adicionales img {
     height: 70px;
-    margin-right: 10px;
+    // margin-right: 10px;
     margin-bottom: 10px;
   }
 

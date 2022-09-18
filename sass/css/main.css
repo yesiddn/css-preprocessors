@@ -28,16 +28,20 @@ main {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .perfil {
-  width: 100%;
+  width: 50%;
   padding-top: 50px;
-  background-color: #8841da;
+  padding-bottom: 50px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
+  background-color: #ffffff;
+}
+.perfil else {
+  background-color: #8841da;
 }
 .perfil__avatar {
   display: block;
@@ -46,25 +50,28 @@ main {
 }
 .perfil__nombre, .perfil__minibio h2 {
   font-family: "Oswald", sans-serif;
+  color: #8841da;
 }
 .perfil__titulo, .perfil__minibio h3 {
   font-size: 12px;
   font-weight: 700;
   text-align: center;
   color: rgba(255, 255, 255, 0.5);
+  font-family: "Oswald", sans-serif;
+  color: rgba(63, 87, 154, 0.6);
 }
 .perfil__boton {
   display: block;
   width: 100px;
   height: 40px;
   margin: 20px auto;
-  padding-top: 5px;
-  border: 2px solid rgba(255, 255, 255, 0.8);
+  padding-top: 7px;
   border-radius: 20px;
-  background-color: rgba(51, 51, 51, 0.4);
   text-decoration: none;
   color: #ffffff;
   font-family: "Lato", sans-serif;
+  border: 2px solid #333333;
+  background-color: #333333;
 }
 
 .perfil__minibio {
@@ -103,8 +110,7 @@ main {
   width: 60%;
   height: 90px;
   margin: 30px auto;
-  padding-top: 20px;
-  padding-left: 40px;
+  padding: 25px 40px;
   border-radius: 20px;
   -webkit-box-shadow: 0 20px 33px 0 rgba(51, 51, 51, 0.5);
           box-shadow: 0 20px 33px 0 rgba(51, 51, 51, 0.5);
@@ -131,7 +137,7 @@ main {
   width: 60%;
   height: 250px;
   margin: 0px auto;
-  padding: 20px 0 0 30px;
+  padding: 20px 30px;
   border-radius: 20px;
   -webkit-box-shadow: 0 20px 33px 0 rgba(51, 51, 51, 0.5);
           box-shadow: 0 20px 33px 0 rgba(51, 51, 51, 0.5);
@@ -142,16 +148,50 @@ main {
   margin-bottom: 10px;
   font-size: 20px;
   font-weight: 600;
+  text-align: start;
   font-family: "Oswald", sans-serif;
 }
 .galeria__foto-principal {
   float: left;
+  margin-right: 30px;
+}
+.galeria__fotos-adicionales img:nth-child(2) {
+  margin-right: 10px;
 }
 .galeria__fotos-adicionales img {
   height: 70px;
-  margin-right: 10px;
   margin-bottom: 10px;
 }
 .galeria img {
   border-radius: 10px;
+}
+
+.articulos {
+  width: 50%;
+  padding-top: 50px;
+  padding-left: 75px;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.articulo {
+  margin-bottom: 50px;
+  padding-right: 50px;
+  border-bottom: 3px solid #8841da;
+}
+.articulo__categoria {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #8841da;
+  font-family: "Oswald", sans-serif;
+}
+.articulo__titulo {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+}
+.articulo__descripcion {
+  margin-bottom: 30px;
+  padding-right: 30px;
 }

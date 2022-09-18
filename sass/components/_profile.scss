@@ -3,12 +3,18 @@
 // En index.scss se importan todos at-rules y se exportan todos los componentes con use
 
 .perfil {
-  width: 100%;
+  width: 50%;
   padding-top: 50px;
-  background-color: $secondary-color;
+  padding-bottom: 50px;
   text-align: center;
   text-transform: uppercase;
   color: $light-color;
+
+  @if $dark-mode {
+    background-color: $light-color;
+  } else {
+    background-color: $secondary-color;
+  }
 
   // ANIDACIÓN
   &__avatar {
@@ -18,25 +24,40 @@
   }
   &__nombre {
     @include titles($font-two);
+
+    @if $dark-mode {
+      color: $secondary-color;
+    }
   }
   &__titulo {
     font-size: 12px;
     font-weight: 700;
     text-align: center;
     color: get-opacity($light-color, 0.5);
+    @include titles($font-two);
+
+    @if $dark-mode {
+      color: get-opacity($aux-color, 0.6);
+    }
   }
   &__boton {
     display: block;
     width: 100px;
     height: 40px;
     margin: 20px auto;
-    padding-top: 5px;
-    border: 2px solid get-opacity($light-color, 0.8);
+    padding-top: 7px;
     border-radius: 20px;
-    background-color: get-opacity($primary-color, 0.4);
     text-decoration: none;
     color: $light-color;
     @include titles($font-one);
+    
+    @if $dark-mode {
+      border: 2px solid get-opacity($primary-color, 1);
+      background-color: get-opacity($primary-color, 1);
+    } @else {
+      border: 2px solid get-opacity($light-color, 0.8);
+      background-color: get-opacity($primary-color, 0.5);
+    }
   }
 }
 
