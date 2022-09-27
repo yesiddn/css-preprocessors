@@ -9,6 +9,18 @@ light-color = #FFFFFF
 font-one = 'Lato', sans-serif
 font-two = 'Oswald', sans-serif
 
+// MIXINS
+contenedor()
+  display flex
+  width 90%
+  margin 0 auto
+  padding 30px 0
+  justify-content space-evenly
+
+shadow()
+  background-color light-color
+  box-shadow 0 20px 33px 0 rgba(0,0,0,0.2)
+
 * 
   box-sizing border-box
 
@@ -40,11 +52,7 @@ body
     outline none
 
 .encabezado--con-filtros
-  display flex
-  width 90%
-  margin 0 auto
-  padding 30px 0
-  justify-content space-between
+  contenedor()
 
   h2
     margin-top 10px
@@ -58,6 +66,7 @@ body
     height 75px
     padding 20px
     margin-left auto
+    shadow()
 
     span
       font-family font-two
@@ -66,3 +75,28 @@ body
     a
       margin-left 20px
       font-size 25px
+      color primary-color
+
+.contenido
+  contenedor()
+  margin-bottom 40px
+
+.caja 
+  max-width 400px
+  margin 0 10px
+  border-radius 10px
+  shadow()
+  
+  &__contenido
+    padding 20px
+    background-color light-color
+
+    span
+      text-transform uppercase
+      color secondary-color
+      font-family font-two
+
+    h3
+      text-transform uppercase
+      font-family font-two
+      font-weight normal
