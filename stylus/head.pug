@@ -7,6 +7,15 @@ mixin caja(imagen, category, title, summary)
 			p=summary
 		+estadistica
 
+mixin news(title, summary)
+	.news
+		.news__content
+			span.news__categoria Noticias
+			a(href="#")
+				h3=title
+			p=summary
+		+estadistica
+
 mixin estadistica
 	.estadistica--articulos: ul
 		li
