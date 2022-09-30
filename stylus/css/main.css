@@ -113,6 +113,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  color: rgba(51,51,51,0.4);
 }
 .estadistica--articulos ul li {
   list-style: none;
