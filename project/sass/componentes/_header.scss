@@ -7,8 +7,8 @@
   border-bottom: 1px solid #ebebeb;
 }
 
-.nav--header ul{
-  display: flex;
+.nav--header ul {
+  display: none;
   padding-top: 38px;
 
   li {
@@ -17,12 +17,16 @@
   }
   a {
     color: $color-variacion;
-    @include titulos($Fuente2)
+    @include titulos($Fuente2);
+  }
+
+  @include media(desktop-s) {
+    display: flex;
   }
 }
 
 .header__busqueda {
-  display: flex;
+  display: none;
   margin-left: auto;
   padding-top: 38px;
 
@@ -36,6 +40,9 @@
   }
   span {
     color: $color-variacion;
-    @include titulos($Fuente2)
+    @include titulos($Fuente2);
+  }
+  @include media(tablet) {
+    display: flex;
   }
 }

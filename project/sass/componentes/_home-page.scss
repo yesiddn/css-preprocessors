@@ -1,11 +1,16 @@
 .contenedor--home {
-  height: 1200px;
-  width: 1300px;
-  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include media(desktop-s) {
+    height: 1200px;
+    width: 1300px;
+    margin: 0 auto;
 
-  @include display-grid;
-  @include grid-template-columns(grid-repeat(4, 1fr));
-  @include grid-template-rows(grid-repeat(4, 1fr));
+    @include display-grid;
+    @include grid-template-columns(grid-repeat(4, 1fr));
+    @include grid-template-rows(grid-repeat(4, 1fr));
+  }
 }
 
 .caja--grande {
@@ -33,17 +38,17 @@
   @include grid-column(4, 5);
 }
 
-.caja-ff { 
-	@include grid-row(4, 5);
-	@include grid-column(2, 3);	
+.caja-ff {
+  @include grid-row(4, 5);
+  @include grid-column(2, 3);
 }
 
-.caja-fortnite { 
-	@include grid-row(4, 5);
-	@include grid-column(3, 4);	
-} 
+.caja-fortnite {
+  @include grid-row(4, 5);
+  @include grid-column(3, 4);
+}
 
-.caja-xbox { 
-	@include grid-row(4, 5);
-	@include grid-column(4, 5);	
+.caja-xbox {
+  @include grid-row(4, 5);
+  @include grid-column(4, 5);
 }

@@ -454,6 +454,8 @@ output {
 [hidden] {
   display: none !important;
 }
+/* Media Queries Mixin
+**********************/
 h1 {
   font-size: 30px;
   font-family: "Oswald", sans-serif;
@@ -579,7 +581,7 @@ main {
 .estadistica--articulos {
   height: 70px;
   padding: 20px;
-  border-top: 1px solid #E9E9E9;
+  border-top: 1px solid #e9e9e9;
 }
 .estadistica--articulos ul {
   display: -webkit-box;
@@ -597,6 +599,40 @@ main {
 }
 .estadistica--articulos span {
   margin-left: 10px;
+}
+
+.caja--con-fondo__stats {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  border: none;
+  text-align: center;
+}
+.caja--con-fondo__stats ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+}
+.caja--con-fondo__stats li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.6;
+}
+.caja--con-fondo__stats i, .caja--con-fondo__stats span {
+  margin: 5px;
+  color: #FFF;
 }
 
 .ubicacion--perfil {
@@ -957,9 +993,7 @@ main {
 }
 
 .nav--header ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   padding-top: 38px;
 }
 .nav--header ul li {
@@ -972,11 +1006,16 @@ main {
   text-transform: uppercase;
   font-weight: 700;
 }
+@media only screen and (min-width: 992px) {
+  .nav--header ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 
 .header__busqueda {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin-left: auto;
   padding-top: 38px;
 }
@@ -993,6 +1032,13 @@ main {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+}
+@media only screen and (min-width: 768px) {
+  .header__busqueda {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .footer--principal {
@@ -1044,15 +1090,27 @@ main {
 }
 
 .contenedor--home {
-  height: 1200px;
-  width: 1300px;
-  margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media only screen and (min-width: 992px) {
+  .contenedor--home {
+    height: 1200px;
+    width: 1300px;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
 }
 
 .caja--grande {
@@ -1125,4 +1183,70 @@ main {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4/5;
+}
+
+.sidebar--listado {
+  max-width: 300px;
+  padding: 20px;
+  color: #333333;
+  -webkit-box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 20px 33px 0px rgba(0, 0, 0, 0.2);
+}
+.sidebar--listado h3 {
+  margin-bottom: 30px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+.sidebar--listado ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar--listado li {
+  margin: 10px 0;
+  padding: 10px 0;
+  border-top: 1px solid rgba(51, 51, 51, 0.4);
+}
+.sidebar--listado a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 20px;
+  color: #333333;
+}
+.sidebar--listado__numero {
+  margin-right: 20px;
+  color: rgba(51, 51, 51, 0.4);
+}
+
+.banner--homepage {
+  max-width: 300px;
+  margin-bottom: 20px;
+  padding: 50px;
+  background-color: #8841DA;
+  color: #FFF;
+}
+.banner--homepage h3 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+.banner--homepage .button {
+  padding: 10px 20px;
+  height: 50px;
+  border: 2px solid #FFF;
+  border-radius: 30px;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
 }
